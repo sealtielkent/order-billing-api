@@ -8,10 +8,6 @@ import java.util.List;
 @Component
 public class DiscountedBill extends OrderBill {
 
-    public DiscountedBill() {
-        //empty constructor
-    }
-
     @Override
     public double getTotalBill() {
         double totalBill = 0.0;

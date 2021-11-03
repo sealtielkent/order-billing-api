@@ -28,7 +28,7 @@ public class OrderAndBillingController {
     private final OrderRepository orderRepository;
     private final RegularBill regularBill;
     private final DiscountedBill discountedBill;
-    private final CafeClerk clerk = new CafeClerk("Kentaru");
+    private CafeClerk clerk;
 
     @Autowired
     public OrderAndBillingController(OrderRepository orderRepository,
@@ -96,6 +96,6 @@ public class OrderAndBillingController {
     @GetMapping("orders/clerk")
     @ResponseStatus(HttpStatus.OK)
     public CafeClerk getClerk() {
-        return clerk;
+        return clerk = new CafeClerk("Kentaru");
     }
 }
